@@ -3,7 +3,7 @@ name: Build & Push n8n Runners Image
 "on":
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 env:
