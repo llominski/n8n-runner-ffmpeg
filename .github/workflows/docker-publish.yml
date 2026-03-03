@@ -5,8 +5,8 @@ name: Build & Push n8n Runners Image
     branches:
       - main
     paths:
-      - 'n8n/Dockerfile'
-      - 'n8n/n8n-task-runners.json'
+      - 'Dockerfile'
+      - 'n8n-task-runners.json'
       - '.github/workflows/docker-publish.yml'
   workflow_dispatch:
 
@@ -47,8 +47,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./n8n
-          file: ./n8n/Dockerfile
+          context: ./
+          file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
