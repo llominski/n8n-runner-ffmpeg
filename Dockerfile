@@ -7,5 +7,7 @@ RUN chmod +x /usr/local/bin/ffmpeg /usr/local/bin/ffprobe
 
 RUN cd /opt/runners/task-runner-python && uv pip install moviepy av imageio-ffmpeg
 
+ENV IMAGEIO_FFMPEG_EXE=/usr/local/bin/ffmpeg
+
 COPY n8n-task-runners.json /etc/n8n-task-runners.json
 USER runner
