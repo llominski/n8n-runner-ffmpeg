@@ -24,7 +24,7 @@
         "HOME"
       ],
       "env-overrides": {
-        "NODE_FUNCTION_ALLOW_BUILTIN": "crypto,path,fs,os",
+        "NODE_FUNCTION_ALLOW_BUILTIN": "crypto,path,fs,os,child_process",
         "NODE_FUNCTION_ALLOW_EXTERNAL": "moment,uuid",
         "N8N_RUNNERS_HEALTH_CHECK_SERVER_HOST": "0.0.0.0"
       }
