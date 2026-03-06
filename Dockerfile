@@ -9,7 +9,7 @@ RUN cd /opt/runners/task-runner-python && uv pip install moviepy av imageio-ffmp
 
 ENV IMAGEIO_FFMPEG_EXE=/usr/local/bin/ffmpeg
 
-RUN npm install -g sharp
+RUN cd /opt/runners/task-runner-javascript && pnpm -g add moment uuid
 
 COPY n8n-task-runners.json /etc/n8n-task-runners.json
 USER runner
